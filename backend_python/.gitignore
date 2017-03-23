@@ -1,0 +1,6 @@
+venv/**
+.tox/**
+.cache/**
+vuepass.egg-info/**
+vuepass/tests/__pycache__/**
+vuepass/**/*.pyc
