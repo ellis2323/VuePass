@@ -13,6 +13,9 @@ module.exports = {
       'public': path.resolve(__dirname, './public')
     }
   },
+  eslint: {
+    formatter: require('eslint-friendly-formatter')
+  },
   module: {
     rules: [
       {

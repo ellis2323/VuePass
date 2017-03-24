@@ -1,0 +1,11 @@
+[MESSAGES CONTROL]
+disable=I0011
+max-line-length=120
+
+[BASIC]
+# Regular expression which should only match correct variable names
+variable-rgx=[a-z_][a-z0-9_]*$
+
+# Regular expression which should only match correct list comprehension /
+# generator expression variable names
+inlinevar-rgx=[A-Za-z_][A-Za-z0-9_]*$
