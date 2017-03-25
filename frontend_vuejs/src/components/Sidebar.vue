@@ -1,7 +1,7 @@
 <template>
-<v-sidebar v-model="sidebar4" height="auto">
+<v-sidebar v-model="activeSidebar" height="auto">
     <v-list dense>
-    <template v-for="item in itemGroup">
+    <template v-for="item in dataSidebar">
         <v-list-group v-if="item.items">
         <v-list-item slot="item">
             <v-list-tile ripple>
@@ -30,25 +30,20 @@
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        itemGroup: [
-          { header: 'Header' },
-          {
-            title: 'Parent',
-            group: '/company',
-            items: [
-              { title: 'Child' },
-              { title: 'Child' },
-              { title: 'Child' }
-            ]
-          },
-        ],
-        sidebar4: true
-      }
+/* eslint-disable no-unused-vars */
+import axios from 'axios'
+
+export default {
+  mounted () {
+    axios.get('/api/toto')
+  },
+  data () {
+    return {
+      dataSidebar: [],
+      activeSidebar: false
     }
   }
+}
 </script>
 
 <style lang="stylus">

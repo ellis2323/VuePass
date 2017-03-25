@@ -37,7 +37,7 @@ export default {
             { title: 'Child' },
             { title: 'Child' }
           ]
-        },
+        }
       ],
       sidebar4: true,
       item: {

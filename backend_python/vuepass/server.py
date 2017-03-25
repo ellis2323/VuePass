@@ -14,10 +14,12 @@ sys.path.insert(0, PROJECT_PATH)
 # pylint: disable=C0413
 from vuepass import store
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 
 # Flask Application
 APP = Flask(__name__)
+CORS(APP, resources={r"/api/*": {"origins": "*"}})  #faille potentiel(à changer en prod, ou mieux la définir)
 APP.debug = True
 
 config = {} # pylint: disable=invalid-name
