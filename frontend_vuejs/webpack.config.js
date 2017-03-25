@@ -2,7 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: './src/js/app.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
@@ -12,9 +12,6 @@ module.exports = {
     alias: {
       'public': path.resolve(__dirname, './public')
     }
-  },
-  eslint: {
-    formatter: require('eslint-friendly-formatter')
   },
   module: {
     rules: [
