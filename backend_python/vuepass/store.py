@@ -26,7 +26,6 @@ def link_group(groups, group_key):
 
 def clean_group(groups):
     """remove groups and key keys"""
-    print groups
     if groups.has_key('key'):
         del groups['key']
     if groups.has_key('groups'):

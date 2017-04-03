@@ -5,7 +5,7 @@
     <v-toolbar-logo class="text-xs-right">Logo</v-toolbar-logo>
   </v-toolbar>
   <main>
-    <Sidebar />
+    <e-sidebar />
     <v-content>
 
       <v-container fluid>
@@ -19,11 +19,11 @@
 
 <script>
 
-import Sidebar from './Sidebar.vue'
+import ESidebar from './Sidebar.vue'
 
 export default {
   components: {
-    Sidebar
+    ESidebar
   },
   data () {
     return {
