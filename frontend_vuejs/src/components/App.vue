@@ -7,7 +7,7 @@
   <main>
     <e-sidebar />
     <v-content>
-
+      <div @click="INCREMENT(1)">{{ count2 }}</div>
       <v-container fluid>
         <router-view></router-view>
       </v-container>
@@ -20,6 +20,8 @@
 <script>
 
 import ESidebar from './Sidebar.vue'
+import { mapGetters, mapMutations } from 'vuex'
+import { INCREMENT } from '../store/mutation-types.js'
 
 export default {
   components: {
@@ -44,6 +46,16 @@ export default {
         text: 'Get Started'
       }
     }
+  },
+  computed: {
+    ...mapGetters([
+      'count', 'count2'
+    ])
+  },
+  methods: {
+    ...mapMutations([
+      INCREMENT
+    ])
   }
 }
 </script>
