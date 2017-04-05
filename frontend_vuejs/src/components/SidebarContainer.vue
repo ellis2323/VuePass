@@ -3,7 +3,7 @@
 <div>
   <li class="list__item">
     <div href="#" class="list__tile">
-      <div class="list__tile__content">
+      <div class="list__tile__content" @click="selectContainer(model.uid)">
         {{ model.title }}
       </div>
       <div>
@@ -22,6 +22,9 @@
 </template>
 
 <script>
+import { SELECT_KEYSBOXES } from '../store/mutation-types.js'
+import { mapMutations } from 'vuex'
+
 import ESidebarElement from './SidebarElement.vue'
 
 export default {
@@ -37,11 +40,16 @@ export default {
       expand: true
     }
   },
-
   methods: {
     toggleContainer: function () {
       this.expand = !this.expand
-    }
+    },
+    selectContainer: function (uid) {
+      this.SELECT_KEYSBOXES(uid)
+    },
+    ...mapMutations([
+      SELECT_KEYSBOXES
+    ])
   }
 
 }

@@ -1,2 +1,4 @@
 export const INCREMENT = 'INCREMENT'
 export const DECREMENT = 'DECREMENT'
+export const SET_KEYBOXES = 'SET_KEYBOXES'
+export const SELECT_KEYSBOXES = 'SELECT_KEYSBOXES'

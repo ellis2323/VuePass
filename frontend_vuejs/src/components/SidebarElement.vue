@@ -1,7 +1,7 @@
 <template>
   <li class="list__item">
     <div href="#" class="list__tile">
-      <div class="list__tile__content">
+      <div class="list__tile__content" @click="selectContainer(model.uid)">
         {{ model.title }}
       </div>
       <div>
@@ -11,6 +11,9 @@
 </template>
 
 <script>
+import { SELECT_KEYSBOXES } from '../store/mutation-types.js'
+import { mapMutations } from 'vuex'
+
 export default {
   name: 'ESidebarElement',
   props: {
@@ -18,6 +21,14 @@ export default {
   },
   data () {
     return {}
+  },
+  methods: {
+    selectContainer: function (uid) {
+      this.SELECT_KEYSBOXES(uid)
+    },
+    ...mapMutations([
+      SELECT_KEYSBOXES
+    ])
   }
 }
 </script>

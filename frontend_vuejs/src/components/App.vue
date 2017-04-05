@@ -7,7 +7,7 @@
   <main>
     <e-sidebar />
     <v-content>
-      <div @click="INCREMENT(1)">{{ count2 }}</div>
+      <div @click="INCREMENT(1)">{{ count }}</div>
       <v-container fluid>
         <router-view></router-view>
       </v-container>
@@ -49,7 +49,7 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'count', 'count2'
+      'count'
     ])
   },
   methods: {
